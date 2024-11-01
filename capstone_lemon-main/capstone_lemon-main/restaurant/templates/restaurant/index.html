@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Lemon</title>
+  <meta name="description" content="A Mediterranean restaurant with a modern twist, based in Chicago, Illinois.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <i class="bi bi-house-door-fill text-primary fs-3"></i> Little Lemon
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Book</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center bg-light py-5">
+    <div class="container">
+      <h1 class="display-4">SPECIAL OFFER</h1>
+      <p class="lead">30% Off This Weekend</p>
+      <a href="#" class="btn btn-primary btn-lg">Book now</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <div class="row g-4">
+      <!-- Menu Section -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <i class="bi bi-egg-fried fs-1 text-warning mb-3"></i>
+            <h5 class="card-title">Our New Menu</h5>
+            <p class="card-text">Discover seasonal items inspired by Italian, Greek, and Turkish cuisines.</p>
+            <a href="#" class="btn btn-outline-primary">See our new menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Section -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <i class="bi bi-calendar-check-fill fs-1 text-success mb-3"></i>
+            <h5 class="card-title">Book a Table</h5>
+            <p class="card-text">Reserve your table for an unforgettable Mediterranean dining experience.</p>
+            <a href="#" class="btn btn-outline-primary">Book your table now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hours Section -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <i class="bi bi-clock-fill fs-1 text-info mb-3"></i>
+            <h5 class="card-title">Opening Hours</h5>
+            <p class="card-text">Open 7 days a week, except on public holidays.</p>
+            <ul class="list-unstyled">
+              <li>Mon - Fri: 2pm - 10pm</li>
+              <li>Sat: 2pm - 11pm</li>
+              <li>Sun: 2pm - 9pm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <i class="bi bi-heart-fill text-danger fs-3"></i>
+      <p class="mt-3">&copy; {{ current_year }} Little Lemon</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle (with Popper) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
